@@ -1,0 +1,109 @@
+@use "./SASS/Main" as *;
+
+
+:root{
+  --primary: #000;
+  --secondary : #{$gray-9};
+  
+  --bgMode: #{$gray-8};  //barMenu + mode
+
+  --bg-ul:#{$dark-6};
+  --shadow-ul: #{$gray-9};
+
+  --text : #fff; // text of project + span of barMenu
+
+  --border :  #{$gray-7};  //barMenu
+
+  --social : #fff;
+
+  --divider :#{$gray-8};
+
+  --shadow-btn :#{$gray-9};
+  --bg-button : #{$gray-9};
+  --text-btn : white;   //butn + h3 in card
+  --hover-btn : #{$gray-8};
+  --border-btn : #{gray-9};
+  --disabled : 0.4;
+
+  --shadow-card: #fff;
+  --border-card : #{$blue-6};
+
+  --Title-contact:#{$dark-0};  
+  --bg-contact :#{$dark-9};
+
+  --hover: #{$blue-6};
+}
+
+.light{
+  --primary:#{$gray-1}; 
+  --secondary : #fff;
+  
+  --bgMode: #{$gray-4};  //bg of dark button
+
+  --bg-ul:#fff;
+  --shadow-ul: #{$gray-3};
+
+  --text : #000;
+
+  --border :  #{$gray-7};
+
+  --social : #{$gray-7};
+
+  --divider : #{$gray-2};
+
+  --shadow-btn : #{$gray-6};
+  --bg-button : #{$gray-6};
+  --text-btn : black;
+  --hover-btn : #{$gray-9};
+  --border-btn : #{gray-6};
+  --disabled : 0.8;
+
+  --shadow-card: #000;
+  --border-card : null;
+
+  --Title-contact:#{$dark-8};
+  --bg-contact :#{$dark-0};
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color : var(--primary);
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+.container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--secondary);
+}
+
+.divider{
+  border-bottom: 1px solid var(--divider);
+  margin: 20px 0;
+}
+
+.icon-social{
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 992px) {
+  .container {
+  width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    width: 98%;
+  }
+}

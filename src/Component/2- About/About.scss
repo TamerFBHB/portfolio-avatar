@@ -1,0 +1,62 @@
+@use "../../SASS/Main" as *;
+
+
+.About{
+    @include flex(center , center);
+    padding: 30px 50px;
+}
+
+.About .info{
+    width:70%;
+    @include flex-col(start , start);
+    gap: 30px
+}
+.About .info .foto{
+    @include flex(start , end);
+    @include size (100% , 80px)
+}
+.About .info .foto img{
+    @include circle(90px);
+    padding: 3px;
+    border: none;
+    border: 2px solid $orange-8;
+    box-shadow:inset 2px 2px 7px $gray-5,inset -2px -2px 7px $gray-5;
+}
+.About .info .foto .icon-ali{
+    margin: 10px;
+    font-size: 20px;
+    fill: $blue-5;
+}
+.About .info h1{
+    font-size: 45px;
+    width: 70%;
+    color: var(--text);
+}
+.About .info p{
+    line-height: 30px;
+    color: var(--text);
+}
+.About .info .social{
+    @include flex(center , center);
+    gap: 15px;
+    font-size: 20px;
+    color: var(--social);
+}
+.About .animation{
+    width:30%;
+    @include flex(center , center);
+    @include size(30%,100%);
+}
+
+
+
+
+
+
+
+@media (max-width:992px) {
+    .About .info h1{
+        font-size: 40px;
+        width: 100%;
+    }
+}

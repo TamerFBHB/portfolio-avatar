@@ -1,0 +1,27 @@
+@use "../../SASS/Main" as * ;
+
+.btnToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    @include circle(40px);
+    border: none;
+    background-color: $blue-6;
+    @include flex(center,center);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+    &:hover{
+        background-color: $blue-4;
+    }
+}
+.btnToTop .btn{
+    font-size: 20px;
+    fill: var(--primary);
+    @include icon-Bold(75px, var(--primary));
+}
+.apear{
+    transform: translateY(-10px);
+    opacity: 1;
+}
+

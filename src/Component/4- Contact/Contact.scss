@@ -1,0 +1,9 @@
+@use "../../SASS/Main" as * ;
+
+.contact{
+    @include flex(center,center);
+}
+
+.contactForm{
+    width: 50%;
+}

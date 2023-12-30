@@ -1,0 +1,166 @@
+@use "../../SASS/Main" as *;
+
+
+/*=======================
+1- header and nav of links
+2- barMenu
+3- model of links
+========================*/
+
+
+/*=======================
+1- header and nav of links
+========================*/
+
+header {
+    @include flex(center,center);
+    padding: 10px
+}
+header nav{
+    @include flex(center,center);
+    @include size(80% , 60px);
+}
+header nav ul{
+    @include flex(center,center);
+    background-color: var(--bg-ul);
+    @include size(fit-content , fit-content);
+    box-shadow: 1px 1px 50px var(--shadow-ul);
+    border-radius: 30px;
+}
+header nav ul li{    
+    padding: 5px;
+    // list-style: none;
+}
+header nav ul li a{
+    color: var(--text);
+    transition: 0.3s;
+}
+header nav ul li a:hover{
+    color: var(--hover);
+}
+
+/*=======================
+    2- barMenu
+========================*/
+header .barMenu{
+    @include circle(35px);
+    @include flex-col(center,center);
+    cursor: pointer;
+    border: none;
+    border: 1px solid var(--border);
+    background-color: var(--bgMode);
+    display: none;
+    &:active{
+        scale: 0.9
+    }
+    &:hover{
+        border: 1px solid $orange-8;
+    }
+}
+header .barMenu:hover{
+    border: 2px solid $orange-8;
+}
+header .barMenu span{
+    @include size(15px , 1px);
+    background-color: var(--text);
+}
+header .barMenu span:nth-child(2){
+    margin-top: 4px;
+    }
+header .barMenu span:nth-child(3){
+margin-top: 4px;
+}
+
+/*=======================
+    3- model of links
+========================*/
+
+.bg-modal {
+    position: fixed;
+    inset: 0;
+    @include size(100%,100%);
+    @include blur-color(#474747b1);
+    @include animation(FadeIn);
+    transition: 0.5s;
+    z-index: 10;
+}
+.modal{
+    position: relative;
+    background-color: $gray-8;
+
+    background-color: var(--secondary);
+    @include size(30% , fit-content);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 20px;
+    @include animation(puls);
+    animation-duration: 1s;
+    transition: 0.5s;
+}
+.modal ul{
+    @include flex-col(center,start);
+    @include size(100% , 100%);
+    color: var(--text);
+}
+.modal ul li{
+    border-bottom: 1px solid var(--border);
+    @include flex(start,center);
+    width: 100%;
+    padding: 10px 0;
+}
+.modal ul li:first-child{
+    border: none;
+    @include flex(end,center);
+    @include size(100% , 30px);
+    padding: 0;
+    transition: 0.3s;
+}
+.modal ul li:nth-child(2){
+    padding-top: 0;
+}
+.modal ul li:last-child{
+    border: none;
+}
+.modal ul li a{ 
+    color: var(--text);   
+}
+.modal .close{    
+    transition: 0.3s;
+    cursor: pointer;
+}
+.modal .close:hover{
+    fill: $red-5;
+    @include animation(span);
+    animation-duration: 0.3s;
+    font-size: 20px;
+
+}
+
+
+
+
+/*=======================
+mobile screen
+========================*/
+@media (max-width:992px){
+    .modal{        
+        @include size(60% , fit-content);
+        }
+}
+@media (max-width:600px) {
+    header {
+        @include flex(space-between,center);
+        padding: 10px 30px;
+    }
+    header nav{
+        display: none;
+    }
+    header .barMenu{
+        display: flex;
+    }
+    .modal{        
+        @include size(80% , fit-content);
+        }
+}

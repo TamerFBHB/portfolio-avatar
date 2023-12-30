@@ -1,0 +1,29 @@
+@use "../../SASS/Main" as *;
+
+
+.dark_mode{
+    position: relative;
+    cursor: pointer;
+    @include circle(40px);
+    @include flex(center,center);    
+    background-color: var(--bgMode);
+    border: none;
+    border-width: 2px;
+    padding: 5px;
+    &:active{
+        transform: scale(0.95);
+    }
+    &:hover{
+        border: 1px solid $orange-8;
+    }
+}
+
+.sun{
+    position: absolute;
+    fill: $orange-8;
+    @include center ;
+    font-size: 18px;
+}
+.moon{
+    position: absolute;
+}

@@ -1,0 +1,112 @@
+@use "../../SASS/Main" as *;
+
+
+
+
+/*===================================
+    1- button    
+    2- projects
+=====================================*/
+
+.Projects{
+    @include flex(center,start);
+    padding: 30px 50px;
+}
+
+/*===================================
+    1- button
+=====================================*/
+
+.Projects .buttons{
+    position: sticky;
+    top: 10px;
+    width: 25%;
+    @include flex-col(center,start);
+    gap: 5px
+}
+.Projects .buttons button{
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 1px var(--shadow-btn) , -0px -0px 1px var(--shadow-btn);
+    background-color: var(--bg-button);
+    border: 1px solid var(--border-btn);
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: var(--disabled);
+    width: 75%;
+    transition: 0.3s;
+
+    &:hover{
+        opacity: 1;
+        background-color: var(--hover-btn);
+    }
+    &.active{        
+        opacity: 1;
+        background-color: var(--hover-btn);
+        border: 1px solid $blue-6;
+        color: #fff;
+    }
+}
+.Projects .buttons button:nth-child(2){
+    text-transform: uppercase
+}
+
+/*===================================
+    2- projects
+=====================================*/
+.Projects .my-Project{
+    @include flex(center,center);
+    row-gap: 15px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.Projects .my-Project .card{
+    @include size(250px , 350px);
+    box-shadow: 0px 0px 0.7px var(--shadow-card) , -0px -0px 0.7px var(--shadow-card);
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover{
+        transform: rotate(1deg);
+        border: 1px solid var(--border-card );
+    }
+}
+.card .body-card{    
+    padding: 5px 10px 0;
+    @include flex-col(start,start);
+    gap: 10px;
+}
+.card .body-card h3{
+    color: var(--text-btn );
+}
+.card .body-card p{
+    font-size: 12.5px;
+    line-height: 20px;
+    color: var(--text-btn );
+}
+.Projects .my-Project .card img{
+    @include size(100% , 50%);
+    border-radius: 5px;
+}
+
+.card .body-card .links{
+    @include size(100% , 50px);
+    @include flex(space-between , center);
+    padding: 0 10px;
+    color: var(--social);
+}
+.Projects .my-Project .card .links div:first-child{
+    @include size(50% , 100%);
+    @include flex(start,center);
+    gap: 10px
+}
+.more{
+    @include flex(center,center);
+    color: $blue-6;
+    gap: 10px;
+
+}
