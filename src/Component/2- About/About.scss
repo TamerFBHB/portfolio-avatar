@@ -21,6 +21,7 @@
     border: none;
     border: 2px solid $orange-8;
     box-shadow:inset 2px 2px 7px $gray-5,inset -2px -2px 7px $gray-5;
+    @include animation-time(puls , 1s,0s);
 }
 .About .info .foto .icon-ali{
     margin: 10px;
@@ -31,6 +32,7 @@
     font-size: 45px;
     width: 70%;
     color: var(--text);
+    @include animation-time(FadeIn , 2s,0s);
 }
 .About .info p{
     line-height: 30px;

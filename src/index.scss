@@ -36,9 +36,9 @@
 
 .light{
   --primary:#{$gray-1}; 
-  --secondary : #fff;
+  --secondary :  #{$gray-4};
   
-  --bgMode: #{$gray-4};  //bg of dark button
+  --bgMode: #{$gray-5};  //bg of dark button
 
   --bg-ul:#fff;
   --shadow-ul: #{$gray-3};

@@ -125,7 +125,7 @@
 @include dot-rolling($h);
 
 //42  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
-@include animation($animation, $delay);
+@include animation($animation);
 
 //43 border gradient
 @include border-gradient($w,$clr1,$clr2,$clr3);
@@ -142,3 +142,5 @@
 //46 border-left gradient
 @include border-left-gradient($w,$clr1,$clr2,$clr3);
 
+//47  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
+@include animation-time($animation, $transition);
