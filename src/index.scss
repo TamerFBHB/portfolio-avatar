@@ -90,7 +90,10 @@ body{
   border-bottom: 1px solid var(--divider);
   margin: 20px 0;
 }
-
+.end{
+  margin:  0;
+  background-color: red;
+}
 .icon-social{
   cursor: pointer;
 }

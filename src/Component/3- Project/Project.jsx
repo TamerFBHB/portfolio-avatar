@@ -6,6 +6,8 @@ import { FaGithub } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { Data } from "./Data";
 
+import { motion } from "framer-motion"
+
 const Project = () => {
 
     // to add class active to butoon
@@ -52,7 +54,13 @@ const Project = () => {
 
                 {arr.map((item) => {
                     return (
-                        <div className="card "
+                        <motion.div 
+                        layout
+                        initial={{ transform: "scale(0.4)" }}
+                        animate={{ transform: "scale(1)" }}
+                        transition={{ type: "spring", damping: 8, stiffness: 50 }}
+
+                        className="card "
                             key={item.image}>
                             <img src={item.image} alt="" />
                             <div className="body-card ">
@@ -69,7 +77,7 @@ const Project = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     )
                 })
                 }

@@ -1,9 +1,14 @@
+
+import LogoT from "../LogoT/LogoT";
 import "./Footer.scss";
+import { BsCCircle } from "react-icons/bs";
 
 const Footer = () => {
     return (
-        <div>
-            footer
+        <div className="footer">
+            <BsCCircle />
+            <p>2023 design by Tamer Fouad Boshara</p>
+            <LogoT />
         </div>
     );
 }
