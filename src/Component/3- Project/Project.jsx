@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { Data } from "./Data";
 
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 const Project = () => {
 
@@ -20,8 +20,8 @@ const Project = () => {
 
         const newArr = Data.filter((item) => {
             return item.category === buttonCategory ||
-            item.category2 === buttonCategory
-            
+                item.category2 === buttonCategory
+
         });
         setArr(newArr);
     };
@@ -52,35 +52,37 @@ const Project = () => {
             </div>
             <div className="my-Project">
 
-                {arr.map((item) => {
-                    return (
-                        <motion.div 
-                        layout
-                        initial={{ transform: "scale(0.4)" }}
-                        animate={{ transform: "scale(1)" }}
-                        transition={{ type: "spring", damping: 8, stiffness: 50 }}
+                <AnimatePresence>
+                    {arr.map((item) => {
+                        return (
+                            <motion.div
+                                layout
+                                initial={{ transform: "scale(0.4)" }}
+                                animate={{ transform: "scale(1)" }}
+                                transition={{ type: "spring", damping: 8, stiffness: 50 }}
 
-                        className="card "
-                            key={item.image}>
-                            <img src={item.image} alt="" />
-                            <div className="body-card ">
-                                <h3>{item.title}</h3>
-                                <p className="">Lorem ipsum dolor sit amet consectetur elit adipisicing . Ex tempore dolor in, accusantium laudantium accusamus.</p>
-                                <div className="links ">
-                                    <div className=" ">
-                                        <FaLink className="icon-social" />
-                                        <FaGithub className="icon-social" />
-                                    </div>
-                                    <div className="more icon-social">
-                                        more
-                                        <FaArrowRight />
+                                className="card "
+                                key={item.image}>
+                                <img src={item.image} alt="" />
+                                <div className="body-card ">
+                                    <h3>{item.title}</h3>
+                                    <p className="">Lorem ipsum dolor sit amet consectetur elit adipisicing . Ex tempore dolor in, accusantium laudantium accusamus.</p>
+                                    <div className="links ">
+                                        <div className=" ">
+                                            <FaLink className="icon-social" />
+                                            <FaGithub className="icon-social" />
+                                        </div>
+                                        <div className="more icon-social">
+                                            more
+                                            <FaArrowRight />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    )
-                })
-                }
+                            </motion.div>
+                        )
+                    })
+                    }
+                </AnimatePresence>
             </div>
         </div>
     );
