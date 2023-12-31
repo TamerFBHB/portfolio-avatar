@@ -29,8 +29,8 @@ const Project = () => {
     return (
         <div className="Projects" id="Project">
             <div className="buttons ">
-                <button onClick={() => { setcurrentActive("all"); setArr(Data); }}
-                    className={`${currentActive === "all" ? "active" : null}`}>
+                <button  onClick={() => { setcurrentActive("all"); setArr(Data); }}
+                    className={`${currentActive === "all" ? "active" : null}`} >
                     all projects
                 </button>
                 <button onClick={() => { handleClick("css") }}
