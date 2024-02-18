@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import ContactForm from "../4- ContactForm/ContactForm";
+import ContactForm from "../4-ContactForm/ContactForm";
 import contactAnimation from './contact.json'
 import "./Contact.scss"
 

@@ -1,4 +1,3 @@
-// must install npm i lottie-react and choice the animation from this link
 
 import Lottie from "lottie-react";
 import send from "./Animation - 1703957134964.json";

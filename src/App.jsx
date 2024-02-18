@@ -12,6 +12,7 @@ function App() {
   return (
     <div className='container'>
 
+
       <ScrollButton />
 
       <Header />
@@ -25,7 +26,7 @@ function App() {
       <Contact />
       <div className='divider end' />
 
-      <Footer  />
+      <Footer />
     </div>
   )
 }
